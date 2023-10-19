@@ -8,6 +8,13 @@ function setCocktail(event) {
     getCocktailData();
 }
 
+const cancelResults = () => {
+    const results = document.querySelectorAll(.result);
+    results.forEach(result){
+        result.remove();
+    }
+}
+
 function getCocktailData () {
     fetch(url + cocktail).then((response) =>{
         response.json().then((data) =>{
