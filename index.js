@@ -8,12 +8,12 @@ function setCocktail(event) {
     getCocktailData();
 }
 
-const cancelResults = () => {
+function cancelResults()  {
     const results = document.querySelectorAll(".result");
-    results.forEach(result){
-        result.remove();
+        if (results.length > 0) {
+            results.forEach((result) => result.remove());
+        }
     }
-}
 
 function getCocktailData () {
     fetch(url + cocktail).then((response) =>{
