@@ -9,7 +9,7 @@ function setCocktail(event) {
 }
 
 const cancelResults = () => {
-    const results = document.querySelectorAll(.result);
+    const results = document.querySelectorAll(".result");
     results.forEach(result){
         result.remove();
     }
