@@ -3,11 +3,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./style.css"/>
 </head>
 <body>
-    <h1>Cocktail</h1>
-    <input type="text" placeholder="Search for a cocktail" onchange="setCocktail(event)">
+    <div class="header">
+        <h1>The Cocktail DB</h1>
+    </div>
+    <div class="main-content">
+    <input type="text" placeholder="Search for a cocktail" onchange="setCocktail(event)" onkeyup="getCocktailData(event)">
+    <div class="buttons">
+    <button onclick="cocktail ? getCocktailData(event) : null">Cerca</button>
     <button onclick="cancelResults()">Elimina i risultati</button>
+    </div>
+    </div>
+    <div class="search-results">
+    </div>
     <script src="./index.js"></script>
 
 </body>

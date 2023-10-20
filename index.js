@@ -1,11 +1,10 @@
 const url = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=";
 let cocktail = "";
-const body = document.querySelector("body");
+const body = document.querySelector(".search-results");
 
 
 function setCocktail(event) {
     cocktail = event.target.value;
-    getCocktailData();
 }
 
 function cancelResults()  {
@@ -15,7 +14,9 @@ function cancelResults()  {
         }
     }
 
-function getCocktailData () {
+function getCocktailData (event) {
+    if(event && event.keyCode === 13 || event.type === "click") {
+        console.log(event)
     fetch(url + cocktail).then((response) =>{
         response.json().then((data) =>{
             if(data.drinks.length > 0) {
@@ -27,6 +28,8 @@ function getCocktailData () {
 
             }
             for(let i = 0; i<data.drinks.length; i++) {
+                const resultContainer = document.createElement("div");
+                resultContainer.className = "result";
                 const titleDrink = document.createElement("h1");
                 titleDrink.className = "result";
                 const img = document.createElement("img");
@@ -36,11 +39,13 @@ function getCocktailData () {
                 titleDrink.innerText = data.drinks[i].strDrink;
                 paragraph.innerText = data.drinks[i].strInstructionsIT;
                 img.src = data.drinks[i].strDrinkThumb;
-                body.appendChild(titleDrink);
-                body.appendChild(paragraph);
-                body.appendChild(img);
+                body.appendChild(resultContainer);
+                resultContainer.appendChild(titleDrink);
+                resultContainer.appendChild(paragraph);
+                resultContainer.appendChild(img);
             }
         }
         })
     })
+}
 }
