@@ -15,8 +15,7 @@ function cancelResults()  {
     }
 
 function getCocktailData (event) {
-    if(event && event.key === 'Enter' || event.type === "click") {
-        console.log(event)
+    if(cocktail.length > 0 && event && event.key === 'Enter' || event.type === "click") {
     fetch(url + cocktail).then((response) =>{
         response.json().then((data) =>{
             if(data.drinks.length > 0) {
