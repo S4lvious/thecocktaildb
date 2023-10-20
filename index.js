@@ -15,7 +15,7 @@ function cancelResults()  {
     }
 
 function getCocktailData (event) {
-    if(event && event.keyCode === 13 || event.type === "click") {
+    if(event && event.key === 'Enter' || event.type === "click") {
         console.log(event)
     fetch(url + cocktail).then((response) =>{
         response.json().then((data) =>{
