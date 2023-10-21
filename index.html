@@ -2,18 +2,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>The Cocktail DB</title>
     <link rel="stylesheet" href="./style.css"/>
 </head>
 <body>
     <div class="header">
-        <h1>The Cocktail DB</h1>
+    <div class="header-center">
+        <div class="logo">
+            <img src="./assets/logo.png" alt="logo">
+        </div>
+        <div class="menu">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+        </div>
+    </div>
     </div>
     <div class="main-content">
+    <div class="main-content-center">
     <input type="text" placeholder="Search for a cocktail" onchange="setCocktail(event)" onkeyup="getCocktailData(event)">
     <div class="buttons">
     <button onclick="cocktail ? getCocktailData(event) : null">Cerca</button>
     <button onclick="cancelResults()">Elimina i risultati</button>
+    </div>
     </div>
     </div>
     <div class="search-results">

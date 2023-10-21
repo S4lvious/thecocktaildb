@@ -1,8 +1,38 @@
-.header {
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+.header-center {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     color: red;
+    padding: 20px;
+    width: 60%;
+    margin: auto;
+    background-color: #DEE2D6;
+}
+
+.header {
+    width: 100%;
+    background-color: #DEE2D6;
+}
+
+.menu {
+    display: flex;
+    gap: 10px;
+
+}
+
+.menu a {
+    text-decoration: none;
+    color: #0D1B2A;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+}
+
+.menu a:hover {
+    color: gray;
 }
 
 input {
@@ -13,7 +43,7 @@ input {
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 10px;
-    width: 50%;
+    width: 100%;
   }
 
   button {
@@ -24,9 +54,13 @@ input {
     border-radius: 10px;
     background-color: whitesmoke;
     border: 1px solid #ddd;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    color: #986C6A;
   }
 
 .main-content{
+    margin-top: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -34,18 +68,68 @@ input {
     gap: 20px;
 }
 
-.search-results{
+.main-content-center {
+    border-radius: 10px;
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
+    padding: 20px;
+    width: 50%;
+    background-color: #DEE2D6;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+.search-results{
+    display: grid;
+    grid-template-columns: auto auto auto;
     gap: 30px;
-    text-overflow: clip;
+    width: 100%;
+    justify-content: center;
+    margin-top: 30px;
 }
 
 div.result {
-    width: 50%;
+    background-color: white;
+    height: 550px;
+    width: 300px;
+    padding: 12px 14px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
+
+h1.result {
+    color: #0D1B2A;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+img.result {
+    height: 300px;
+    width: 100%;
+}
+
+p.result {
+    color: grey;
+    font-family: 'Roboto', sans-serif;
+}
+
+button.result {
+    background-color: #476a2e;
+    letter-spacing: 2px;
+    color: white;
+}
+
+button.result:hover {
+    background-color: #6a9f45;
+}
+
+
 
 
 /* CSS RESET */
@@ -53,4 +137,5 @@ html body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: #F3F8F2;
 }

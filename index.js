@@ -35,13 +35,18 @@ function getCocktailData (event) {
                 img.className = "result";
                 const paragraph = document.createElement("p");
                 paragraph.className = "result";
+                const button = document.createElement("button");
+                button.innerText = "Details".toUpperCase();
+                button.className = "result";
                 titleDrink.innerText = data.drinks[i].strDrink;
-                paragraph.innerText = data.drinks[i].strInstructionsIT;
+                paragraph.innerText = data.drinks[i].strCategory;
                 img.src = data.drinks[i].strDrinkThumb;
                 body.appendChild(resultContainer);
+                resultContainer.appendChild(img);
                 resultContainer.appendChild(titleDrink);
                 resultContainer.appendChild(paragraph);
-                resultContainer.appendChild(img);
+                resultContainer.appendChild(button);
+  
             }
         }
         })
