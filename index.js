@@ -37,6 +37,9 @@ function getCocktailData (event) {
                 paragraph.className = "result";
                 const button = document.createElement("button");
                 button.innerText = "Details".toUpperCase();
+                button.addEventListener("click", () => {
+                    window.location.href = "details.html?id=" + data.drinks[i].idDrink;
+                })
                 button.className = "result";
                 titleDrink.innerText = data.drinks[i].strDrink;
                 paragraph.innerText = data.drinks[i].strCategory;
@@ -46,6 +49,7 @@ function getCocktailData (event) {
                 resultContainer.appendChild(titleDrink);
                 resultContainer.appendChild(paragraph);
                 resultContainer.appendChild(button);
+        
   
             }
         }
