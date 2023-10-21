@@ -13,13 +13,14 @@
         </div>
         <div class="menu">
             <a href="./index.html">Home</a>
+            <a href="./all-cocktails.html">All Cocktails</a>
             <a href="#">About</a>
         </div>
     </div>
     </div>
     <div class="main-content">
     <div class="main-content-center">
-    <input type="text" placeholder="Search for a cocktail" onchange="setCocktail(event)" onkeyup="getCocktailData(event)">
+    <input type="text" placeholder="Search for a cocktail" onkeypress="setCocktail(event); getCocktailData(event)">
     <div class="buttons">
     <button onclick="cocktail ? getCocktailData(event) : null">Cerca</button>
     <button onclick="cancelResults()">Elimina i risultati</button>
