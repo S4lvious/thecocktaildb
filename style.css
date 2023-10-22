@@ -22,6 +22,26 @@
 
 }
 
+.selected {
+    background-color: #986C6A;
+    border: 2px solid black;
+    padding: 2px 4px;
+    border-radius: 5px;
+}
+
+.main-content-all-cocktails a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+
+}
+
+.main-content-all-cocktails a:hover {
+    color: #0D1B2A;
+}
+
+
+
 .menu a {
     text-decoration: none;
     color: #0D1B2A;
@@ -45,6 +65,10 @@ input {
     border-radius: 10px;
     width: 100%;
   }
+
+   input:focus {
+    outline: 1px solid gray;
+   }
 
   button {
     padding-top: 8px;

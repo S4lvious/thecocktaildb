@@ -1,6 +1,14 @@
 const urlParams = new URLSearchParams(window.location.search);
 const letter = urlParams.get('letter');
-console.log(letter);
+
+if (letter) {
+    const letters = document.querySelectorAll('.list');
+    letters.forEach(item => {
+        if (item.innerText === letter) {
+            item.classList.add('selected');
+        }
+    });
+}
 const url = `https://www.thecocktaildb.com/api/json/v1/1/search.php?f=${letter}`;
 console.log(url);
 if (letter) {
