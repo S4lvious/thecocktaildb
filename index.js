@@ -57,3 +57,10 @@ function getCocktailData (event) {
     })
 }
 }
+
+function openMenu() {
+    const menu = document.querySelectorAll(".hamburger-line");
+    menu.forEach((item) => item.classList.toggle("open"));
+    const nav = document.querySelector(".menu-mobile");
+    nav.classList.toggle("open");
+}
