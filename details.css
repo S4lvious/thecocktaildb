@@ -77,6 +77,7 @@
     background-color: #476a2e;
     letter-spacing: 2px;
     color: white;
+    border: none;
 }
 
 .back-button button:hover {
