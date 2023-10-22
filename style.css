@@ -137,6 +137,13 @@
 
 }
 
+
+.main-content-all-cocktails {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
 .main-content-all-cocktails a:hover {
     color: #0D1B2A;
 }
