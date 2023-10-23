@@ -28,13 +28,20 @@
     }
 
     div.search-results>div.result {
-        height: 350px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 400px;
         width: 200px;
+        font-size: smaller;
+        text-align: center;
+    
     }
 
     div.search-results>div.result>img.result {
-        height: 100px;
-        width: 100px;
+        height: 100%;
+        width: 100%;
     }
     div.header-center>.menu {
         display: none;
@@ -44,6 +51,12 @@
     }
     div.search-results {
         grid-template-columns: auto;
+    }
+
+    div.result {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
 
