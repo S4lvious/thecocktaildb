@@ -164,13 +164,46 @@
 input {
     background-color: white;
     padding: 10px;
+    padding-left: 40px;
     border: 1px solid #ddd;
     border-radius: 20px;
-    width: 100%;
+    width: 50%;
+    background-image: url("./assets/search_FILL0_wght400_GRAD0_opsz24.png");
+    background-position: 12px 5px;
+    background-repeat: no-repeat;
+    font-family: "Roboto";
+    transition: width 0.4s ease-in-out;
+  }
+
+  .loader-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .loader {
+    display: none;
+    margin-top: 100px;
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 2s linear infinite;
+  }
+
+  .loader.show {
+      display: block;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
   }
 
    input:focus {
     outline: none;
+    width: 100%;
    }
 
   button {
@@ -207,6 +240,7 @@ input {
 .main-content-center {
     border-radius: 10px;
     display: flex;
+    align-items: center;
     flex-direction: column;
     padding: 20px;
     width: 50%;

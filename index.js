@@ -1,7 +1,7 @@
 const url = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=";
 let cocktail = "";
 const body = document.querySelector(".search-results");
-
+const loader = document.querySelector(".loader");
 
 function setCocktail(event) {
     cocktail = event.target.value;
@@ -16,8 +16,10 @@ function cancelResults()  {
 
 function getCocktailData (event) {
     if(cocktail != "" && event) {
+    loader.classList.add("show");
     fetch(url + cocktail).then((response) =>{
         response.json().then((data) =>{
+            loader.classList.remove("show");
             if(data.drinks.length > 0) {
             const oldResults = document.querySelectorAll(".result");
             const oldResultsTop = document.querySelectorAll(".result-top");
@@ -32,7 +34,6 @@ function getCocktailData (event) {
                 for (let i = 0; i<oldResultsBottom.length; i++){
                     oldResultsBottom[i].remove();
                 }
-
             }
             for(let i = 0; i<data.drinks.length; i++) {
                 const resultContainer = document.createElement("div");
@@ -64,7 +65,6 @@ function getCocktailData (event) {
                 bottom.appendChild(titleDrink);
                 bottom.appendChild(paragraph);
                 bottom.appendChild(button);
-        
   
             }
         }
