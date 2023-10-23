@@ -85,6 +85,15 @@
     div.search-results {
         grid-template-columns: auto;
     }
+
+    span.tags {
+        display: block;
+        background-color: #6a9f45;
+        padding: 5px;
+        border-radius: 5px;
+        color: white;
+        font-family: 'Roboto', sans-serif;
+    }
 }
 
 .hamburger-line {
@@ -177,11 +186,7 @@
 }
 
 span {
-    background-color: #6a9f45;
-    padding: 5px;
-    border-radius: 5px;
-    color: white;
-    font-family: 'Roboto', sans-serif;
+    display: none;
 }
 
 .section {
