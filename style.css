@@ -1,5 +1,6 @@
   @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,900&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
 
   @media only screen and (max-width: 999px) {
 
@@ -7,8 +8,12 @@
         display: block;
     }
 
+    div.main-content-center {
+        width: 90%;
+    }
+
     .menu-mobile.open {
-        background-color: #DEE2D6;
+        background-color: white;
         position: absolute;
         display: block;
         height: 100vh;
@@ -26,23 +31,6 @@
     div.header>div.header-center {
         width: 100%;
     }
-
-    div.search-results>div.result {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 400px;
-        width: 200px;
-        font-size: smaller;
-        text-align: center;
-    
-    }
-
-    div.search-results>div.result>img.result {
-        height: 100%;
-        width: 100%;
-    }
     div.header-center>.menu {
         display: none;
     }
@@ -53,11 +41,7 @@
         grid-template-columns: auto;
     }
 
-    div.result {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+
 }
 
 
@@ -96,12 +80,12 @@
     padding: 20px;
     width: 60%;
     margin: auto;
-    background-color: #DEE2D6;
+    background-color: white;
 }
 
 .header {
     width: 100%;
-    background-color: #DEE2D6;
+    background-color: white;
 }
 
 .menu {
@@ -128,7 +112,7 @@
         font-weight: bold;
         font-size: 20px;
         font-family: 'Roboto', sans-serif;
-        font-weight: 100;
+        font-weight: 300;
 
 }
 
@@ -137,17 +121,18 @@
 }
 
 .selected {
-    background-color: #986C6A;
-    border: 2px solid black;
+    background-color: white;
+    border: 1px solid black;
     padding: 2px 4px;
     border-radius: 5px;
+
 }
 
 .main-content-all-cocktails a {
     color: black;
     text-decoration: none;
-    font-weight: bold;
-
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
 }
 
 
@@ -169,7 +154,7 @@
     font-weight: bold;
     font-size: 20px;
     font-family: 'Roboto', sans-serif;
-    font-weight: 100;
+    font-weight: 300;
 }
 
 .menu a:hover {
@@ -178,17 +163,14 @@
 
 input {
     background-color: white;
-    background-image: url('searchicon.png');
-    background-position: 10px 10px;
-    background-repeat: no-repeat;
     padding: 10px;
     border: 1px solid #ddd;
-    border-radius: 10px;
+    border-radius: 20px;
     width: 100%;
   }
 
    input:focus {
-    outline: 1px solid gray;
+    outline: none;
    }
 
   button {
@@ -200,8 +182,8 @@ input {
     background-color: whitesmoke;
     border: 1px solid #ddd;
     font-family: 'Roboto', sans-serif;
-    font-weight: 600;
-    color: #986C6A;
+    font-weight: 300;
+    color: #0D1B2A;
   }
 
 .main-content{
@@ -228,7 +210,6 @@ input {
     flex-direction: column;
     padding: 20px;
     width: 50%;
-    background-color: #DEE2D6;
 }
 
 .buttons {
@@ -247,11 +228,14 @@ input {
     margin-top: 30px;
 }
 
+div.result-bottom{
+    padding: 24px;
+}
+
 div.result {
     background-color: white;
-    height: 550px;
-    width: 300px;
-    padding: 12px 14px;
+    height: 100%;
+    width: 350px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
@@ -291,5 +275,5 @@ html body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #F3F8F2;
+    background-color: whitesmoke;
 }

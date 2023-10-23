@@ -7,6 +7,12 @@
         flex-direction: column;
     }
 
+    .back-button {
+        display: none;
+    }
+
+    
+
     div.left-section {
         border-radius: 0px;
         width: 100%;
@@ -40,7 +46,7 @@
         width: 100%;
         height: 100%;
         box-shadow: none;
-        background-color: #F3F8F2;
+        background-color: whitesmoke;
     }
 
     div.header>div.header-center>div.hamburger {
@@ -48,7 +54,7 @@
     }
 
     .menu-mobile.open {
-        background-color: #DEE2D6;
+        background-color: white;
         position: absolute;
         display: block;
         height: 100vh;
@@ -104,18 +110,20 @@
     border-radius: 5px;
 }
 
-.hamburger-line.open:first-child{
-    transform: rotate(-45deg);
-    transform: translateX(0px) translateY(8px) rotate(-45deg);
+.hamburger-line:first-child{
+    transform: rotate(-30deg);
+    transform: translateX(0px) translateY(-6px) rotate(-30deg);
     background-color: #0D1B2A;
+    cursor: pointer;
 }
 
-.hamburger-line.open:nth-child(2){
+.hamburger-line:nth-child(2){
     display: none;
 }
-.hamburger-line.open:last-child{
-    transform: rotate(45deg);
+.hamburger-line:last-child{
+    transform: rotate(30deg);
     background-color: #0D1B2A;
+    cursor: pointer;
 }
 
 
@@ -158,12 +166,12 @@
   padding: 20px;
   width: 60%;
   margin: auto;
-  background-color: #DEE2D6;
+  background-color: white;
 }
 
 .header {
   width: 100%;
-  background-color: #DEE2D6;
+  background-color: white;
 }
 
 .menu {
@@ -232,6 +240,8 @@ span {
     background-color: #476a2e;
     letter-spacing: 2px;
     color: white;
+    letter-spacing: 2px;
+    color: white;
     border: none;
 }
 
@@ -279,5 +289,5 @@ html body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #F3F8F2;
+    background-color: whitesmoke;
 }

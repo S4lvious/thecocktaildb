@@ -20,14 +20,26 @@ function getCocktailData (event) {
         response.json().then((data) =>{
             if(data.drinks.length > 0) {
             const oldResults = document.querySelectorAll(".result");
+            const oldResultsTop = document.querySelectorAll(".result-top");
+            const oldResultsBottom = document.querySelectorAll(".result-bottom");
             if(oldResults.length > 0) {
                 for (let i = 0; i<oldResults.length; i++){
                     oldResults[i].remove();
+                }
+                for (let i = 0; i<oldResultsTop.length; i++){
+                    oldResultsTop[i].remove();
+                }
+                for (let i = 0; i<oldResultsBottom.length; i++){
+                    oldResultsBottom[i].remove();
                 }
 
             }
             for(let i = 0; i<data.drinks.length; i++) {
                 const resultContainer = document.createElement("div");
+                const top = document.createElement("div");
+                top.className = "result-top";
+                const bottom = document.createElement("div");
+                bottom.className = "result-bottom";
                 resultContainer.className = "result";
                 const titleDrink = document.createElement("h1");
                 titleDrink.className = "result";
@@ -45,10 +57,13 @@ function getCocktailData (event) {
                 paragraph.innerText = data.drinks[i].strCategory;
                 img.src = data.drinks[i].strDrinkThumb;
                 body.appendChild(resultContainer);
-                resultContainer.appendChild(img);
-                resultContainer.appendChild(titleDrink);
-                resultContainer.appendChild(paragraph);
-                resultContainer.appendChild(button);
+                resultContainer.appendChild(top);
+                resultContainer.appendChild(bottom);
+
+                top.appendChild(img);
+                bottom.appendChild(titleDrink);
+                bottom.appendChild(paragraph);
+                bottom.appendChild(button);
         
   
             }

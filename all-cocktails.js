@@ -31,17 +31,23 @@ if (letter) {
         button.classList.add('result');
         const drinkDiv = document.createElement('div');
         drinkDiv.classList.add('result');
+        const top = document.createElement("div");
+        top.className = "result-top";
+        const bottom = document.createElement("div");
+        bottom.className = "result-bottom";
         const drinkName = document.createElement('h1');
         drinkName.classList.add('result');
         drinkName.innerText = drink.strDrink;
         const drinkImage = document.createElement('img');
         drinkImage.classList.add('result');
         drinkImage.src = drink.strDrinkThumb;
-        drinkDiv.appendChild(drinkName);
-        drinkDiv.appendChild(drinkImage);
         searchResults.appendChild(drinkDiv);
-        drinkDiv.appendChild(paragraph);
-        drinkDiv.appendChild(button);
+        drinkDiv.appendChild(top);
+        drinkDiv.appendChild(bottom);
+        top.appendChild(drinkImage);
+        bottom.appendChild(drinkName);
+        bottom.appendChild(paragraph);
+        bottom.appendChild(button);
     });
 });           
 }
