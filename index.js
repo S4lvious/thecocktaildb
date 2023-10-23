@@ -45,8 +45,8 @@ function getCocktailData (event) {
                 paragraph.innerText = data.drinks[i].strCategory;
                 img.src = data.drinks[i].strDrinkThumb;
                 body.appendChild(resultContainer);
-                resultContainer.appendChild(img);
                 resultContainer.appendChild(titleDrink);
+                resultContainer.appendChild(img);
                 resultContainer.appendChild(paragraph);
                 resultContainer.appendChild(button);
         
