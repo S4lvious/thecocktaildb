@@ -4,12 +4,12 @@ const letter = urlParams.get('letter');
 if (letter) {
     const letters = document.querySelectorAll('.list');
     letters.forEach(item => {
-        if (item.innerText === letter) {
+        if (item.innerText === letter.toUpperCase()) {
             item.classList.add('selected');
         }
     });
 }
-const url = `https://www.thecocktaildb.com/api/json/v1/1/search.php?f=${letter}`;
+const url = `https://www.thecocktaildb.com/api/json/v1/1/search.php?f=${letter.toUpperCase()}`;
 console.log(url);
 if (letter) {
     fetch(url)
