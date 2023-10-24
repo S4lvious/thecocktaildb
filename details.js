@@ -4,7 +4,7 @@ let isCocktailList = url.get("isCocktailList");
 let cocktailTitle;
 const urlDetails = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=";
 function goBack(){
-    isCocktailList ? window.location.href = `./all-cocktails.html?letter=${cocktailTitle[0]}` : window.location.href = './index.html';
+    window.history.back();
 }
 fetch(urlDetails + id).then((response) => {
     response.json().then((data) => {
