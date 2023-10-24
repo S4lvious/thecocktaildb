@@ -1,8 +1,11 @@
 let url = new URLSearchParams(window.location.search);
 let id = url.get("id");
-
+let isCocktailList = url.get("isCocktailList");
+let cocktailTitle;
 const urlDetails = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=";
-
+function goBack(){
+    isCocktailList ? window.location.href = './all-cocktails.html?letter=${cocktailTitle[0]}' : window.location.href = './index.html';
+}
 fetch(urlDetails + id).then((response) => {
     response.json().then((data) => {
         console.log(data);
@@ -16,6 +19,7 @@ fetch(urlDetails + id).then((response) => {
         const cocktailName = document.querySelector(".cocktail-name");
         const name = document.createElement("h1");
         name.innerText = data.drinks[0].strDrink;
+        cocktailTitle = data.drinks[0].strDrink;
         cocktailName.appendChild(name);
 
         const cocktailIngredients = document.querySelector(".cocktail-ingredients");
