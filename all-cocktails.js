@@ -23,7 +23,7 @@ if (letter) {
         const button = document.createElement('button');
         button.innerText = 'Details'.toUpperCase();
         button.addEventListener('click', () => {
-            window.location.href = `./details.html?id=${drink.idDrink}?isCocktailList=${true}`;
+            window.location.href = `./details.html?id=${drink.idDrink}&isCocktailList=${true}`;
         });
         const paragraph = document.createElement("p");
          paragraph.className = "result";
